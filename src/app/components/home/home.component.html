@@ -1,0 +1,200 @@
+<div class="h-44 w-full bg-gradient-to-r from-purple-950 to-purple-100 mt-16">
+    <div class="font-serif text-xl text-white p-7">
+        Hello Rahul Sonawane Good Afternoon!
+    </div>
+</div>
+
+<div class="p-4 relative z-0 -mt-28">
+    <div class="flex flex-wrap">
+        <!-- Left Section -->
+        <div class="w-3/12 p-2">
+            <div class="bg-white border h-72 border-gray-50 rounded-lg shadow-md mb-5">
+                <h2 class="text-lg font-bold text-gray-800 m-3">Upcoming Interviews</h2>
+                <img class="mt-5 mb-4 mx-auto"
+                    src="https://qa-candidate-dsaas.simplifysandbox.net/static/media/no-interview.694d2e81.svg"
+                    alt="No Interviews" />
+                <p class="text-gray-600 text-sm m-2 mt-16">
+                    No interviews scheduled yet. Hang tight, they're on their way!
+                </p>
+            </div>
+            <div class="bg-white border h-auto border-gray-50 rounded-lg shadow-md mb-5">
+                <h2 class="text-lg font-bold text-gray-800 m-3">Profile Alerts</h2>
+                <div class="flex justify-between items-center m-3">
+                    <span>Pending Actions 1</span>
+                    <span class="cursor-pointer mr-3">
+                        <i class="fa-solid fa-caret-down" (click)="toggleCollapse()"></i>
+                    </span>
+                </div>
+                <div *ngIf="isCollapsed" class="ml-3 mt-2 p-2">
+                    <p class="text-gray-700 text-sm">You have 1 pending action for your profile.</p>
+                </div>
+            </div>
+            <div class="bg-white border h-60 border-gray-50 rounded-lg shadow-md">
+                <h2 class="text-lg font-bold text-gray-800 m-3">My Referrals</h2>
+                <img class="mt-5 mb-4 mx-auto"
+                    src="data:image/jpeg;base64,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"
+                    alt="No Referrals" height="50px" width="130px" />
+                <p class="text-gray-600 text-sm m-2 text-center">No Referrals yet.</p>
+            </div>
+        </div>
+
+        <!-- Center Section -->
+        <div class="w-6/12">
+            <div class=" p-2 flex justify-center gap-3 space-x-3">
+                <div class="bg-white border h-36 w-52 border-gray-50 rounded-lg shadow-md p-4">
+                    <div class="bg-orange-200 rounded-md w-7 px-2"><i class="fa-solid fa-file"></i></div>
+                    <h2 class="text-2xl font-bold text-gray-800 mt-6">15</h2>
+                    <p class="text-gray-900 font-bold text-sm mt-2">Applied Jobs</p>
+                </div>
+                <div class="bg-white border h-36 w-52 border-gray-50 rounded-lg shadow-md p-4">
+                    <div class="bg-gray-400 w-8 rounded-md px-2"><i class="fa-solid fa-briefcase"></i></div>
+                    <h2 class="text-2xl font-bold text-gray-800 mt-6">1</h2>
+                    <p class="text-gray-900 font-bold text-sm mt-2">Offered Jobs</p>
+                </div>
+                <div class="bg-white border h-36 w-52 border-gray-50 rounded-lg shadow-md p-4">
+                    <div class="w-8 bg-green-200 rounded-md px-2"><i class="fa-solid fa-user"></i></div>
+                    <h2 class="text-2xl font-bold text-gray-800 mt-6">3</h2>
+                    <p class="text-gray-900 font-bold text-sm mt-2">Onboarded Jobs</p>
+                </div>
+            </div>
+
+            <!-- jobs sections -->
+            <!-- <div class="border hover:bg-slate-200 p-3" *ngFor="let job of jobs">
+                <div class="font-medium">Recommended Jobs</div>
+                <div class="flex items-center mt-3">
+                    <img [src]="job.image" alt="Profile Image" class="h-12 w-12" />
+                    <div class="ml-4">
+                        <div>
+                            <h3 class="font-medium">{{ job.title }}</h3>
+
+                        </div>
+                        <div class="text-sm text-gray-900 mt-1">
+                            <i class="fa-solid fa-location"></i> {{ job.location }}
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-2 flex items-center text-sm text-gray-950 space-x-4">
+                    <span class="flex items-center">
+                        <i class="fa-solid fa-briefcase mr-1"></i> {{ job.company }}
+                    </span>
+                    <span class="flex items-center">
+                        <i class="fa-solid fa-clock mr-1"></i> {{ job.type }}
+                    </span>
+                    <span class="flex items-center">
+                        <i class="fa-solid fa-hashtag mr-1"></i> Job Reference #: {{ job.reference }}
+                    </span>
+                </div>
+            </div> -->
+
+            <div class="col-span-6 flex flex-col gap-4 mt-3">
+                <div class="bg-white border rounded-lg drop-shadow-md p-4">
+                    <h2 class="text-lg font-semibold mb-4">Recommended Jobs</h2>
+                    <hr>
+                    <div *ngFor="let job of jobs">
+                        <div class="flex flex-wrap items-center p-4 hover:bg-gray-100 border-b border-gray-300">
+                            <img [src]="job.image" alt="" class="h-12 w-12 bg-purple-900 mr-4" />
+                            <div class="flex-grow">
+                                <h5 class="font-bold text-purple-900">{{ job.title }}</h5>
+                                <p class="text-gray-900 flex items-center text-xs mt-2">
+                                    <i class="fa-solid fa-location mr-1"> </i>{{ job.location }}
+                                </p>
+                            </div>
+
+                            <div class="text-right">
+                                <div class="flex space-x-4 text-gray-500 mb-2 ml-24">
+                                    <i class="fa-solid fa-share-nodes text-xl cursor-pointer"></i>
+                                    <i class="fa-solid fa-user-plus text-xl cursor-pointer"></i>
+                                </div>
+                                <p class="font-bold text-gray-800 mt-3">{{ job.salary }}</p>
+                            </div>
+
+                            <div class="flex gap-3 text-xs  w-full">
+                                <div>
+                                    <i class="fa-solid fa-briefcase mr-1"></i>{{ job.company }}
+                                </div>
+                                <div>
+                                    <i class="fa-solid fa-clock mr-1"></i>{{ job.type }}
+                                </div>
+                                <div>
+                                    <i class="fa-solid fa-hashtag mr-1"></i>Job Reference #: {{ job.reference }}
+                                </div>
+
+                            </div>
+
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="border text-center p-6 shadow-md">
+                <div class="font-bold ">View All Jobs</div>
+            </div>
+        </div>
+
+
+        <!-- Right Section -->
+        <div class="w-3/12 p-2">
+            <div class="bg-white border text-center border-gray-50 rounded-lg shadow-md">
+                <div
+                    class="h-24 mt-5 w-24 bg-slate-300 mx-auto flex items-center justify-center rounded-full text-2xl font-bold text-slate-800">
+                    R
+                </div>
+                <div class="text-xl font-bold mt-5 text-gray-800">Rahul Sonawane</div>
+                <div class="text-gray-600 text-sm mt-2">Angular Developer</div>
+                <div class="flex justify-center mt-5 space-x-12">
+                    <div class="border-dashed border-2 p-1  bg-slate-50">
+                        <div class="text-lg font-bold">0</div>
+                        <div class="text-sm text-gray-500">Profile Viewed</div>
+                    </div>
+                    <div class="border-dashed border-2 p-1 bg-slate-50">
+                        <div class="text-lg font-bold">0</div>
+                        <span class="text-sm text-gray-500">Profile Downloaded</span>
+                    </div>
+                </div>
+                <div class="mt-5">
+                    <div class="bg-pink-100 p-5 ">
+                        <div class="flex justify-between ">
+                            <div class="text-sm text-gray-500 text-left">Profile Completion</div>
+                            <div class="">70%</div>
+                        </div>
+                        <div class="relative pt-1">
+                            <div class="overflow-hidden h-2 mb-4 text-xs flex rounded bg-gray-200">
+                                <div class="bg-purple-900 h-full rounded" style="width: 70%;"></div>
+                            </div>
+                            <div class="text-sm text-left text-yellow-500">
+                                <i class="fa-solid fa-file"></i> &nbsp; 4 details are missing
+                            </div>
+                        </div>
+
+                        <button class="bg-purple-950 text-white px-4 py-2 w-64 rounded-lg text-sm font-bold mt-4">
+                            Complete Profile
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- talent pool -->
+            <div class="border shadow-md mt-5 text-gray-800 p-3">
+                <div class="font-medium text-gray-900">Talent Communities</div>
+                <div class="flex justify-between mt-3">
+                    <p> <i class="fa-solid fa-user"></i> Exclusive Pool</p>
+                    <p class="font-semibold"> + Join</p>
+
+                </div>
+                <i class="fa-solid fa-briefcase text-xs mt-3"></i> <span class="text-xs ml-2">Proton LLC Corp</span>
+
+
+                <div class=" border text-center mt-2 text-gray-800 p-3">
+                    <p class="font-bold">View All Community</p>
+                </div>
+            </div>
+
+
+        </div>
+
+    </div>
+
+</div>

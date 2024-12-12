@@ -1,0 +1,49 @@
+<nav class="flex items-center justify-between px-6 py-4 shadow-md bg-white fixed top-0 left-0 right-0 z-10">
+    <div class="flex items-center space-x-4">
+        <img src="https://daas-prog-test.s3.amazonaws.com/app_logo_general.png" alt="App Logo" class="h-10" />
+        <ul class="flex space-x-3 text-base font-medium text-gray-700">
+            <li class="hover:bg-gray-200 px-4 py-2 rounded cursor-pointer ml-5"><a routerLink="/home">Home</a></li>
+            <li class="hover:bg-gray-200 px-4 py-2 rounded cursor-pointer"> <a routerLink="/findjob">Find Jobs</a> </li>
+            <li class="hover:bg-gray-200 px-4 py-2 rounded cursor-pointer">My Jobs</li>
+            <li class="relative hover:bg-gray-200 px-4 py-2 rounded cursor-pointer" (click)="toggleDropdown('reports')">
+                Reports <i class="fas fa-caret-down text-gray-600 ml-2"></i>
+
+                <ul *ngIf="dropdown === 'reports'" class="absolute bg-white shadow-lg mt-2 rounded w-40 text-gray-700">
+                    <li class="px-4 py-2 hover:bg-gray-200 cursor-pointer">Report 1</li>
+                    <li class="px-4 py-2 hover:bg-gray-200 cursor-pointer">Report 2</li>
+                </ul>
+            </li>
+            <li class="relative hover:bg-gray-200 px-4 py-2 rounded cursor-pointer"
+                (click)="toggleDropdown('assessments')">
+                Assessments <i class="fas fa-caret-down text-gray-600 ml-2"></i>
+
+                <ul *ngIf="dropdown === 'assessments'"
+                    class="absolute bg-white shadow-lg mt-2 rounded w-40 text-gray-700">
+                    <li class="px-4 py-2 hover:bg-gray-200 cursor-pointer">Assessment 1</li>
+                    <li class="px-4 py-2 hover:bg-gray-200 cursor-pointer">Assessment 2</li>
+                </ul>
+            </li>
+            <li class="hover:bg-gray-200 px-4 py-2 rounded cursor-pointer">Interviews</li>
+        </ul>
+    </div>
+
+    <div class="flex items-center space-x-8">
+        <i class="fas fa-search text-gray-600 cursor-pointer hover:text-gray-800"></i>
+        <i class="fas fa-bell text-gray-600 cursor-pointer hover:text-gray-800"></i>
+        <i class="fas fa-comment-alt text-gray-600 cursor-pointer hover:text-gray-800"></i>
+        <i class="fas fa-headset text-gray-600 cursor-pointer hover:text-gray-800"></i>
+
+        <div class="relative">
+            <div class="flex items-center space-x-2 cursor-pointer " (click)="toggleDropdown('user')">
+                <span class="rounded-full bg-purple-100 text-purple-600 px-4 py-2">R</span>
+                <span class="text-gray-700 font-medium">Rahul Sonawane</span>
+                <i class="fas fa-caret-down text-gray-600"></i>
+            </div>
+            <ul *ngIf="dropdown === 'user'" class="absolute bg-white shadow-lg mt-2 rounded w-60 text-gray-700 right-0">
+                <li class="px-4 py-2 hover:bg-gray-200 cursor-pointer">My Profile</li>
+                <hr>
+                <li class="px-4 py-2 hover:bg-gray-200 cursor-pointer">Logout</li>
+            </ul>
+        </div>
+    </div>
+</nav>
